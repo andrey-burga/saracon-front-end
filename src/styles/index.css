@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #202529;
+}
+
+body {
+  flex: 1;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(100vh - 220px); /* solo si necesitas esta altura base */
+    padding: 20px;
+  }
+}
+
+.container {
+  flex: 1;
+}

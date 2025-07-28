@@ -1,0 +1,77 @@
+/* Resetear márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.card {
+  height: 400px; /* Altura fija */
+  background-color: #f8f9fa; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 10px; /* Espacio entre tarjetas */
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.general-body {
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  gap: 20px; /* Espacio entre las secciones */
+  
+}
+
+.news-section,
+.alert-section {
+  width: 400px;
+  height: 500px;
+  background-color: rgb(189, 189, 47);
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  max-width: 400px;
+  max-height: 500px;
+}
+
+.content-section {
+  width: 800px; /* Ancho fijo */
+  height: 500px; /* Alto fijo */
+  background-color: rgb(85, 176, 196); /* Fondo azul */
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+h1,
+h2 {
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .general-body {
+    flex-direction: column;
+  }
+
+  .news-section,
+  .alert-section,
+  .content-section {
+    width: 90%;
+    height: 90%;
+    
+  }
+ 
+}
