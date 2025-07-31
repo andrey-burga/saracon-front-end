@@ -1,4 +1,4 @@
-import useNotifications from "../hooks/useNotifications";
+import useNotifications from "../hooks/useNotifications.js";
 import Card from "../components/Card";
 
 import Slider from "react-slick";

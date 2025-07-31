@@ -15,9 +15,9 @@ const Login = () => {
     e.preventDefault();
     try {
       const result = await loginUser(username, password);
-
+      console.info(result);
       if (result.message === "Login exitoso") {
-        login(username); // guarda en localStorage y actualiza el contexto
+        login(username, result.tipoUsuario); // guarda en localStorage y actualiza el contexto
         alert("Inicio de sesión exitoso");
         navigate("/"); // Redirecciona a la página principal
       } else {

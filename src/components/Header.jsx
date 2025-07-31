@@ -19,11 +19,13 @@ const HeaderButton = ({ texto }) => <button type="button">{texto}</button>;
 const Header = () => {
   const { isLoggedIn, logout } = useAuth();
   const navigate = useNavigate();
+  const tipoUsuario = localStorage.getItem("tipoUsuario");
 
   const menuItems = [
-    { text: "Home", to: "/" },
-    { text: "About", to: "/about" },
-    { text: "Contact", to: "/contact" },
+    { text: "Inicio", to: "/" },
+
+    /*{ text: "About", to: "/about" },    */
+    /*{ text: "Contact", to: "/contact" },*/
   ];
 
   const handleLogout = () => {
@@ -66,8 +68,20 @@ const Header = () => {
             <div className="header-buttons ms-auto">
               {isLoggedIn ? (
                 <>
-                  <button className="btn btn-danger">Registrar noticia</button>
-                  <button onClick={handleLogout} className="btn btn-danger">
+                  {tipoUsuario === "Persona Natural" && (
+                    <Link to="/report" className="btn btn-primary">
+                      Reportar
+                    </Link>
+                  )}
+                  {tipoUsuario === "Empresa" && (
+                    <Link to="/notifications" className="btn btn-primary">
+                      Notificar
+                    </Link>
+                  )}
+                  <button
+                    onClick={handleLogout}
+                    className="btn btn-primary ms-2"
+                  >
                     Cerrar sesión
                   </button>
                 </>

@@ -10,15 +10,17 @@ export const AuthProvider = ({ children }) => {
     setIsLoggedIn(loggedIn);
   }, []);
 
-  const login = (username) => {
+  const login = (username, tipoUsuario) => {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("username", username);
+    localStorage.setItem("tipoUsuario", tipoUsuario);
     setIsLoggedIn(true);
   };
 
   const logout = () => {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("username");
+    localStorage.removeItem("tipoUsuario");
     setIsLoggedIn(false);
   };
 

@@ -2,7 +2,7 @@
 import axios from "axios"; // Don't forget to import axios!
 import URL from "./urls";
 
-export const useRegisterUser = () => {
+const useRegisterUser = async () => {
   const register = async (formData) => {
     try {
       const response = await axios.post(`${URL}entidad/register`, formData, {
@@ -44,3 +44,5 @@ export const useRegisterUser = () => {
 
   return { register };
 };
+
+export default useRegisterUser;

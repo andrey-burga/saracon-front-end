@@ -1,0 +1,42 @@
+.report-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.btn:hover {
+  color: #402b2b;
+}
+
+.report-form {
+  width: 100%;
+  max-width: 700px; /* Max width for larger screens */
+  height: auto;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for card */
+  background-color: #fff; /* White background for card */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.tittle-card {
+  color: #000000;
+}
+
+h2 {
+  text-align: center; /* Center the heading */
+}
+
+/* Ensure form elements are full-width */
+.form-select,
+.form-control {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .report-form {
+    padding: 20px;
+    max-width: 90%; /* More flexible width on smaller screens */
+  }
+}

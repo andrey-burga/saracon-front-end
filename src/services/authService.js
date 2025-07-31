@@ -1,5 +1,8 @@
+
+import URL from "../hooks/urls";
+
 export const loginUser = async (email, password) => {
-  const response = await fetch("http://localhost:8080/login", {
+  const response = await fetch(`${URL}login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

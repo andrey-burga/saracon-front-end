@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TextInput from "../components/TextInput";
 import SelectInput from "../components/SelectInput";
-import { useRegisterUser } from "../hooks/useRegisterUser";
+import useRegisterUser from "../hooks/useRegisterUser.js";
 
 const { register } = useRegisterUser();
 import { useNavigate } from "react-router-dom";
